@@ -65,16 +65,15 @@ st.plotly_chart(fig_top10)
 #fig = px.line(data_frame = name_df, x = 'year', y = 'n')
 
 # Define the label for the button
-button_label = "Visit SSA Baby Names Limits Page"
+button_label = "Visit SSA Baby Names"
 
 # Define the URL to redirect to when the button is clicked
 url = "https://www.ssa.gov/oact/babynames/limits.html"
 
 # Create a clickable button
-if st.button(button_label):
-    # Redirect to the specified URL when the button is clicked
-    st.markdown(f"[Redirecting to {url} ...]({url})")
-    st.experimental_rerun()
+url = "https://www.ssa.gov/oact/babynames/limits.html"
+if st.button("Go to Social Security Baby Names"):
+    st.markdown(f"[Baby Names Website]({url})")
 
 # https://class-app-app1-6wncbftxutalqdvzn5tsed.streamlit.app
 st.caption("Source: popular_names.csv from Social Security website")
