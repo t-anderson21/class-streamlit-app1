@@ -67,9 +67,7 @@ st.plotly_chart(fig_top10)
 
 
 # Create a clickable button
-url = "https://www.ssa.gov/oact/babynames/limits.html"
-if st.button("Go to Social Security Baby Names"):
-    st.markdown(f"[Baby Names Website]({url})")
+st.link_button("Social Security Baby Names", "https://www.ssa.gov/oact/babynames/limits.html")
 
 # https://class-app-app1-6wncbftxutalqdvzn5tsed.streamlit.app
 st.caption("Source: popular_names.csv from Social Security website")
