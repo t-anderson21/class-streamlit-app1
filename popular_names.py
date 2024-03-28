@@ -3,7 +3,8 @@ import plotly.express as px
 import streamlit as st
 
 st.title('Popular Name Trends')
-st.subheader("Practice for my Stat 386 class")
+st.caption("Practice for my Stat 386 class")
+st.caption("Source: popular_names.csv")
 
 st.divider()
 
@@ -20,12 +21,12 @@ tab1, tab2 = st.tabs(['Female', 'Male'])
 
 with tab1:
     plot_df = name_df[name_df['sex']=='F']
-    fig_f = px.bar(data_frame = plot_df, x ='year', y='n')
+    fig_f = px.line(data_frame = plot_df, x ='year', y='n')
     st.plotly_chart(fig_f)
 
 with tab2:
     plot_df = name_df[name_df['sex']=='M']
-    fig_m = px.bar(data_frame = plot_df, x ='year', y='n')
+    fig_m = px.line(data_frame = plot_df, x ='year', y='n')
     st.plotly_chart(fig_m)
 
 with st.sidebar:
