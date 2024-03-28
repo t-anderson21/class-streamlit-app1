@@ -57,7 +57,7 @@ popular_names_df = popular_names_df.sort_values(by='total', ascending=False)
 top_names_df = popular_names_df.head(10)
 
 # Create the bar chart using Plotly Express
-fig = px.bar(top_names_df, x='name', y='observations', title='Top 10 Most Popular Names')
+fig = px.bar(top_names_df, x='first name', y='total', title='Top 10 Most Popular Names', color_discrete_sequence=['green'])
 fig.update_layout(xaxis_title='Name', yaxis_title='Total Occurrences')
 
 # st.plotly_chart(fig_m, fig_f)
