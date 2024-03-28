@@ -56,15 +56,15 @@ popular_names_df = popular_names_df.sort_values(by='total', ascending=False)
 top_names_df = popular_names_df.head(10)
 
 # Create the bar chart using Plotly Express
-fig = px.bar(top_names_df, x='first name', y='total', title='Top 10 Most Popular Names', color_discrete_sequence=['green'])
-fig.update_layout(xaxis_title='Name', yaxis_title='Total Occurrences')
+fig_top10 = px.bar(top_names_df, x='first name', y='total', title='Top 10 Most Popular Names', color_discrete_sequence=['green'])
+fig_top10.update_layout(xaxis_title='Name', yaxis_title='Total Occurrences')
 
-# st.plotly_chart(fig_m, fig_f)
+st.plotly_chart(fig_top10)
 
 #name_df.groupby('year')['n'].sum().reset_index()  # sum of people named Arthur in the year
 #fig = px.line(data_frame = name_df, x = 'year', y = 'n')
 
 
 
-
+# https://class-app-app1-6wncbftxutalqdvzn5tsed.streamlit.app
 st.caption("Source: popular_names.csv from Social Security website")
