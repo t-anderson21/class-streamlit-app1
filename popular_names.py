@@ -15,6 +15,7 @@ name_df = df[df['name'] == name]
 
 st.header(f'{name} usage over the years')
 
+st.caption("Toggle between Female & Male trends")
 tab1, tab2 = st.tabs(['Female', 'Male'])
 
 with tab1:
