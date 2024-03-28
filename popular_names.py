@@ -45,11 +45,9 @@ with st.sidebar:
     st.dataframe(top_names)
 
 
-st.subheader("Top 10 Most Popular Names")
+
 # Aggregate data by name and sum up the occurrences
 popular_names_df = df.groupby('name')['n'].sum().reset_index()
-
-# Rename the 'n' column to 'observations'
 popular_names_df = popular_names_df.rename(columns={'name': 'first name','n': 'total'})
 
 # Sort the DataFrame by the total occurrences to get the most popular names
@@ -57,7 +55,10 @@ popular_names_df = popular_names_df.sort_values(by='total', ascending=False)
 
 # Select the top 10 most popular names
 top_names_df = popular_names_df.head(10)
-top_names_df
+
+# Create the bar chart using Plotly Express
+fig = px.bar(top_names_df, x='name', y='observations', title='Top 10 Most Popular Names')
+fig.update_layout(xaxis_title='Name', yaxis_title='Total Occurrences')
 
 # st.plotly_chart(fig_m, fig_f)
 
