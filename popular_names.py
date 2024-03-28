@@ -2,9 +2,8 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-st.title('Popular Name Trends')
+st.title('Popular Name Trends (1910-2021)')
 st.caption("Practice for my Stat 386 class")
-st.caption("Source: popular_names.csv")
 
 st.divider()
 
@@ -68,3 +67,4 @@ fig.update_layout(xaxis_title='Name', yaxis_title='Total Occurrences')
 
 
 
+st.caption("Source: popular_names.csv from Social Security website")
