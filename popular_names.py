@@ -43,7 +43,7 @@ with st.sidebar:
     st.dataframe(top_names)
 
 
-st.plotly_chart(fig_m, fig_f)
+# st.plotly_chart(fig_m, fig_f)
 
 #name_df.groupby('year')['n'].sum().reset_index()  # sum of people named Arthur in the year
 #fig = px.line(data_frame = name_df, x = 'year', y = 'n')
