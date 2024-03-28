@@ -64,11 +64,7 @@ st.plotly_chart(fig_top10)
 #name_df.groupby('year')['n'].sum().reset_index()  # sum of people named Arthur in the year
 #fig = px.line(data_frame = name_df, x = 'year', y = 'n')
 
-# Define the label for the button
-button_label = "Visit SSA Baby Names"
 
-# Define the URL to redirect to when the button is clicked
-url = "https://www.ssa.gov/oact/babynames/limits.html"
 
 # Create a clickable button
 url = "https://www.ssa.gov/oact/babynames/limits.html"
