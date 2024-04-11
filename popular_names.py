@@ -64,9 +64,6 @@ st.plotly_chart(fig_top10)
 #name_df.groupby('year')['n'].sum().reset_index()  # sum of people named Arthur in the year
 #fig = px.line(data_frame = name_df, x = 'year', y = 'n')
 
-# Create a clickable button to open the URL
-if st.button("Social Security Baby Names"):
-    st.markdown("[Social Security Baby Names](https://www.ssa.gov/oact/babynames/limits.html)")
 
 # Create a clickable button
 st.link_button("Social Security Baby Names", "https://www.ssa.gov/oact/babynames/limits.html")
