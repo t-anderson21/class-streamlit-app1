@@ -13,7 +13,7 @@ df = pd.read_csv(url)
 name = st.text_input('Enter a name', value = 'John')
 name_df = df[df['name'] == name]
 
-st.header(f'useage of '{name}' over time')
+st.header(f'useage of {name} over time')
 
 st.caption("Toggle between Female & Male trends")
 tab1, tab2 = st.tabs(['Female', 'Male'])
